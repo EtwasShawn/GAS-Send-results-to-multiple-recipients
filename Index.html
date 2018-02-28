@@ -1,0 +1,97 @@
+<!--Index.html START-->
+
+<div>
+
+ <div id="formDiv">
+
+             <form name="myForm" id="myForm">
+
+                 <label for="toEmailTB">TO: Example add1@mail.com,add2@mail.com
+
+                 <br>
+
+                 <input type="text" placeholder="Enter Emails" name="toEmailTB" id="toEmailTB"/></label>
+
+                 <br>
+
+                 <label for="ccEmailTB">CC: Example add1@mail.com,add2@mail.com
+
+                 <br>
+
+                 <input type="text" placeholder="Enter Emails" name="ccEmailTB" id="ccEmailTB"/></label>
+
+                 <br>
+
+                 <label for="subjectTB">Enter Subject
+
+                 <br>
+
+                 <input type="text" placeholder="Enter Subject" name="subjectTB" id="subjectTB"/></label>
+
+                 <br>
+
+                 <label for="messageTA">Enter Message
+
+                 <br>
+
+                 <textarea name="messageTA" id="messageTA" rows="10" cols="50">Write message here</textarea></label>
+
+                 <br>
+
+                 <input type="button" id="submit" value="submit" onclick = "google.script.run.withSuccessHandler(sucSubmitted).processForm(document.getElementById('myForm'))" />
+
+             </form>
+
+         </div>
+
+</div>
+
+<style>
+
+#myForm{
+
+ margin:0 auto;
+
+ }
+
+input, textarea{
+
+    margin-top:5px;
+
+}
+
+label{
+
+    display: block;
+
+    margin-top:5px;
+
+}
+
+input[type="text"]{
+
+    width: 400px;
+
+}
+
+
+
+</style>
+
+<script>
+
+ function sucSubmitted() {
+
+ //get formDiv
+
+  var div = document.getElementById('formDiv');
+
+  //Add message and button that redirects to main form
+
+  div.innerHTML = "Submitted";
+
+  }
+
+</script>
+
+<!--HTML STOP-->
